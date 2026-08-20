@@ -1,41 +1,80 @@
-# Task Management System — React + JWT Authentication
+# Task Management System
+
+A full-stack task management application built using React and Node.js/Express. The application provides user authentication, task management, basic collaboration support, and task analytics.
 
 ## Features
-- User sign up and login
+
+### Authentication
+- User Sign Up
+- User Login
 - JWT-based authentication
-- Password hashing with bcryptjs
-- Email/password validation
-- Protected dashboard routes
+- Password hashing using bcryptjs
+- Email and password validation
+- Protected API routes
 - Logout
-- Task create, update status, delete
-- Basic collaboration-ready task ownership
-- Dashboard analytics
-- React + Vite frontend
-- Express backend
 
-## Run
+### Task Management
+- Create tasks
+- View tasks
+- Update task status
+- Set task priority
+- Add task descriptions
+- Set due dates
+- Delete tasks
 
-### Backend
-```bash
-cd server
-npm install
-npm run dev
-```
+### Collaboration
+- Tasks are associated with authenticated users
+- User-specific task management
+- Task ownership through the authenticated user
+- Architecture can be extended to support task assignment and team members
 
-Backend runs on http://localhost:5000
+### Analytics
+- Total task count
+- To Do tasks
+- In Progress tasks
+- Completed tasks
+- Tasks by status chart
+- Tasks by priority chart
+
+## Technology Stack
 
 ### Frontend
-Open another terminal:
-```bash
-cd client
-npm install
-npm run dev
-```
+- React
+- Vite
+- Axios
+- Recharts
+- Lucide React
+- CSS
 
-Frontend runs on http://localhost:5173
+### Backend
+- Node.js
+- Express.js
+- JWT
+- bcryptjs
+- CORS
 
-## Demo account
-You can create your own account from Sign up. Demo data is created automatically after the first login.
+### Storage
+- JSON-based storage for the development version
 
-## Important
-This is a development/demo authentication implementation. For production, use a real database, HTTPS, secure HttpOnly cookies, refresh-token rotation, rate limiting, email verification, password reset, and server-side audit logging.
+---
+
+# Project Structure
+
+```text
+Task-Management-System/
+│
+├── client/
+│   ├── src/
+│   │   ├── main.jsx
+│   │   └── styles.css
+│   ├── index.html
+│   ├── package.json
+│   └── vite.config.js
+│
+├── server/
+│   ├── server.js
+│   ├── package.json
+│   └── data.json
+│
+├── .gitignore
+└── README.md
